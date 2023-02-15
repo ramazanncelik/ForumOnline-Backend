@@ -57,8 +57,8 @@ app.post("/api/addComplaint", complaintController.addComplaint);
 app.get("/api/getComplaints", complaintController.getComplaints);
 app.post("/api/deleteComplaint", complaintController.deleteComplaint);
 
-const port = process.env.PORT || 9999
-app.listen(5000, () => {
+const port = process.env.PORT || 9999;
+app.listen(port, () => {
     console.log(`Listening port ${port}`);
     mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
         console.log(err ? err : "Mongoose ile bağlantı yapıldı");
